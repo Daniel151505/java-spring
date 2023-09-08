@@ -26,7 +26,7 @@ public class EjemploVariablesRutaController {
 	@GetMapping("/string/{texto}/{numero}")
 	public String variables(@PathVariable String texto, @PathVariable Integer numero, Model model) {
 		model.addAttribute("titulo", "Recibir parámetros de la ruta (@PathVariable)");
-		model.addAttribute("resultado", "El texto enviado en la ruta es: " + texto + " en el path es: " + numero);
+		model.addAttribute("resultado", "El texto enviado en la ruta es: " + texto + " y el número enviado en el path es: " + numero);
 		return "variables/ver";
 	}
 }
