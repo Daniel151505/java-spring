@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,10 +16,19 @@ import com.bolsadeideas.springboot.web.app.models.Usuario;
 @Controller
 @RequestMapping("/app")
 public class IndexController {
+	
+	@Value("${texto.indexController.index.titulo}")
+	private String textoIndex;
+	
+	@Value("${texto.indexController.perfil.titulo}")
+	private String textoPerfil;
+	
+	@Value("${texto.indexController.listar.titulo}")
+	private String textoListar;
 
 	@GetMapping({ "/index", "/", "", "/home" })
 	public String index(Model model) {
-		model.addAttribute("titulo", "Hola Spring Framework");
+		model.addAttribute("titulo", textoIndex);
 		return "index";
 	}
 
@@ -30,7 +40,7 @@ public class IndexController {
 		usuario.setEmail("andres@gmail.com");
 
 		model.addAttribute("usuario", usuario);
-		model.addAttribute("titulo", "Perfil del usuario: ".concat(usuario.getNombre()));
+		model.addAttribute("titulo", textoPerfil + ": ".concat(usuario.getNombre()));
 
 		return "perfil";
 	}
@@ -41,7 +51,7 @@ public class IndexController {
 		// usuarios.add(new Usuario("Andrés", "Guzmán", "andres@correo.com"));
 		// usuarios.add(new Usuario("Sara", "Guzmán", "sara@correo.com"));
 		// usuarios.add(new Usuario("Mayra", "Guzmán", "mayra@correo.com"));
-		model.addAttribute("titulo", "Listado de usuarios");
+		model.addAttribute("titulo", textoListar);
 		// model.addAttribute("usuarios", usuarios);
 
 		return "listar";
