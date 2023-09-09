@@ -1,6 +1,6 @@
 package com.bolsadeideas.springboot.di.app.models.service;
 
-import org.springframework.stereotype.Component;
+//import org.springframework.stereotype.Component;
 
 //@Component("miServicioSimple")
 public class MiServicio implements IServicio {
