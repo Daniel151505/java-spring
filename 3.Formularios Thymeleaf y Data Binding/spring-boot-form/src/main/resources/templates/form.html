@@ -3,11 +3,12 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Titulo Inyeccion de dependencias</title>
+	<title th:text="${titulo}"></title>
 </head>
 
 <body>
-	<form th:action="@{/form} method="post">
+	<h3 th:text="${titulo}"></h3>
+	<form th:action="@{/form}" method="post">
 		<div>
 			<label for="username">Username</label>
 			<div>
@@ -32,7 +33,6 @@
 			</div>
 		</div>
 	</form>
-	<div th:text="${objeto}"></div>
 </body>
 
 </html>
