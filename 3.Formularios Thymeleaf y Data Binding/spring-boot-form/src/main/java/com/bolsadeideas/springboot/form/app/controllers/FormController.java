@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.bolsadeideas.springboot.form.app.models.domain.Usuario;
+
 @Controller
 public class FormController {
 
@@ -21,10 +23,13 @@ public class FormController {
 			@RequestParam String password,
 			@RequestParam String email) {
 		
+		Usuario usuario = new Usuario();
+		usuario.setUsername(username);
+		usuario.setEmail(email);
+		usuario.setPassword(password);
+		
 		model.addAttribute("titulo", "Resultado form");
-		model.addAttribute("username", username);
-		model.addAttribute("password", password);
-		model.addAttribute("email", email);
+		model.addAttribute("usuario", usuario);
 		
 		return "resultado";
 	}
