@@ -20,7 +20,7 @@ public class UsuarioValidador implements Validator {
 		// TODO Auto-generated method stub
 		Usuario usuario = (Usuario)target;
 		
-		ValidationUtils.rejectIfEmpty(errors, "nombre", "NotEmpty.usuario.nombre");
+		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "nombre", "requerido.usuario.nombre");
 		
 		//if(usuario.getNombre().isEmpty()) {
 		//	errors.rejectValue("nombre", "NotEmpty.usuario.nombre");
