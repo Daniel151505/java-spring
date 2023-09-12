@@ -2,7 +2,7 @@ package com.bolsadeideas.springboot.form.app.models.domain;
 
 import java.util.Date;
 
-import org.springframework.format.annotation.DateTimeFormat;
+//import org.springframework.format.annotation.DateTimeFormat;
 
 import com.bolsadeideas.springboot.form.app.validation.IdentificadorRegex;
 import com.bolsadeideas.springboot.form.app.validation.Requerido;
@@ -51,7 +51,7 @@ public class Usuario {
 	@NotNull
 	//@Past
 	@Future
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	//@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date fechaNacimiento;
 
 	public String getNombre() {
