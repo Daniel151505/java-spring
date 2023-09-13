@@ -118,5 +118,15 @@ public class FormController {
 		status.setComplete();
 ;		return "resultado";
 	}
+	
+	@ModelAttribute("listaRolesMap")
+	public Map<String, String> listaRolesMap() {
+		Map<String, String> roles = new HashMap<String, String>();
+		roles.put("ROLE_ADMIN", "Administrador");
+		roles.put("ROLE_USER", "Usuario");
+		roles.put("ROLE_MODERATOR", "Moderador");
+		
+		return roles;
+	}
 
 }
