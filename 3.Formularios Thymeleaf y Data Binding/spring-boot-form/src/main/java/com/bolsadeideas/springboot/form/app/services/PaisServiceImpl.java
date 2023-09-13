@@ -25,7 +25,7 @@ public class PaisServiceImpl implements PaisService {
 	@Override
 	public List<Pais> listar() {
 		// TODO Auto-generated method stub
-		return null;
+		return lista;
 	}
 
 	@Override
