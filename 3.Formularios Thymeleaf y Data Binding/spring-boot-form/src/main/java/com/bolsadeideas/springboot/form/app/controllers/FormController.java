@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
+import com.bolsadeideas.springboot.form.app.editors.NombreMayusculaEditors;
 import com.bolsadeideas.springboot.form.app.models.domain.Usuario;
 import com.bolsadeideas.springboot.form.app.validation.UsuarioValidador;
 
@@ -33,6 +34,9 @@ public class FormController {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		dateFormat.setLenient(false);
 		binder.registerCustomEditor(Date.class, "fechaNacimiento",new CustomDateEditor(dateFormat, true));
+		
+		binder.registerCustomEditor(String.class, "nombre" ,new NombreMayusculaEditors());
+		binder.registerCustomEditor(String.class, "apellido" ,new NombreMayusculaEditors());
 	}
 
 	@GetMapping("/form")
