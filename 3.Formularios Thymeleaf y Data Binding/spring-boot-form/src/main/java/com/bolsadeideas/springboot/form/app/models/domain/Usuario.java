@@ -60,7 +60,7 @@ public class Usuario {
 	private Pais pais;
 	
 	@NotEmpty
-	private List<String> roles;
+	private List<Role> roles;
 
 	public String getNombre() {
 		return nombre;
@@ -134,11 +134,11 @@ public class Usuario {
 		this.pais = pais;
 	}
 
-	public List<String> getRoles() {
+	public List<Role> getRoles() {
 		return roles;
 	}
 
-	public void setRoles(List<String> roles) {
+	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
 
