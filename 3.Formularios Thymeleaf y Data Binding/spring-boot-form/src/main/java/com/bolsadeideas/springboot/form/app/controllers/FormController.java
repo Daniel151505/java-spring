@@ -48,6 +48,9 @@ public class FormController {
 	@Autowired
 	private PaisPropertyEditor paisEditor;
 	
+	@Autowired
+	private PaisPropertyEditor roleEditor;
+	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		binder.addValidators(validador);
@@ -57,6 +60,7 @@ public class FormController {
 		binder.registerCustomEditor(String.class, "nombre" ,new NombreMayusculaEditors());
 		binder.registerCustomEditor(String.class, "apellido" ,new NombreMayusculaEditors());
 		binder.registerCustomEditor(Pais.class, "pais" , paisEditor);
+		binder.registerCustomEditor(Role.class, "roles" , roleEditor);
 	}
 	
 	@ModelAttribute("listaPaises")
