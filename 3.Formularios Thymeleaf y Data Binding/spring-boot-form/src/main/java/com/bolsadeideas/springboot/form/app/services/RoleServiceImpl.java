@@ -24,7 +24,7 @@ public class RoleServiceImpl implements RoleService {
 	@Override
 	public List<Role> listar() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.roles;
 	}
 
 	@Override

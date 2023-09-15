@@ -23,6 +23,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import com.bolsadeideas.springboot.form.app.editors.NombreMayusculaEditors;
 import com.bolsadeideas.springboot.form.app.editors.PaisPropertyEditor;
+import com.bolsadeideas.springboot.form.app.editors.RolesEditor;
 import com.bolsadeideas.springboot.form.app.models.domain.Pais;
 import com.bolsadeideas.springboot.form.app.models.domain.Role;
 import com.bolsadeideas.springboot.form.app.models.domain.Usuario;
@@ -49,7 +50,7 @@ public class FormController {
 	private PaisPropertyEditor paisEditor;
 	
 	@Autowired
-	private PaisPropertyEditor roleEditor;
+	private RolesEditor roleEditor;
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
