@@ -101,6 +101,7 @@ public class FormController {
 		usuario.setNombre("Jhon");
 		usuario.setApellido("Connor");
 		usuario.setIdentificador("123.456.567-k");
+		usuario.setHabilitar(true);
 		model.addAttribute("titulo", "Formulario usuarios");
 		model.addAttribute("usuario", usuario);
 		return "form";
