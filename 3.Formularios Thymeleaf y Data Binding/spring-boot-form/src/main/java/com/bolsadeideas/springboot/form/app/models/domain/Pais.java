@@ -14,6 +14,12 @@ public class Pais {
 	
 	private String nombre;
 	
+	
+
+	@Override
+	public String toString() {
+		return this.id.toString();
+	}
 
 	public Pais() {
 	}
