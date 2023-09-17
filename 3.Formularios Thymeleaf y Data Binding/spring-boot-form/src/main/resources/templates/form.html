@@ -12,9 +12,7 @@
 </head>
 <body>
 	
-	<div class="alert alert-success">
-		<span th:text="'Tiempo transcurrido: ' + ${tiempoTranscurrido} + ' en milisegundos'"></span>
-	</div>
+	<section th:replace="componentes/tiempo :: interceptor"></section>
  
 	<section class=" container d-flex  justify-content-center ">
 		<div class="card col-12 col-lg-6 p-3 mt-4">
