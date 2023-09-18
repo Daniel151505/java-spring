@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@Component
+@Component("horario")
 public class HorarioInterceptor implements HandlerInterceptor {
 
 	@Value("${config.horario.apertura}")
