@@ -3,18 +3,16 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Ha ocurrido un error Oops!</title>
+	<title th:text="${error}"></title>
 </head>
 
 <body>
 	
-	<h1>Ha ocurrido un error Oops!</h1>
-	<div th:text="${error}"></div>
+	<h1 th:text="${error}"></h1>
+	
 	<div th:text="${message}"></div>
 	<div th:text="${status}"></div>
 	<div th:text="${timestamp}"></div>
-	<hr>
-	<div th:text="${trace}"></div>
 
 </body>
 
