@@ -42,7 +42,7 @@ public class ClienteController {
 	}
 	
 	@GetMapping(value="/form/{id}")
-	public String editar(@PathVariable(value="id") Long id, Map <String, Object> model) {
+	public String editar(@PathVariable(value="id") Long id, Map <String, Object> model, SessionStatus status) {
 	
 		Cliente cliente = null;
 		
@@ -67,6 +67,14 @@ public class ClienteController {
 		clienteDao.save(cliente);
 		status.setComplete();
 		return "redirect:listar";
+	}
+	
+	@GetMapping(value="/eliminar/{id}")
+	public String eliminar(@PathVariable(value="id") Long id) {
+		if (id > 0) {
+			clienteDao.delete(id);
+		} 
+		return "redirect:/listar";
 	}
 	
 }
